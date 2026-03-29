@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://projects.ahmadjalil.com",
+  "builds": [
+    {
+      "id": "rack_config",
+      "name": "Home Lab Rack",
+      "description": "2U split panel with UCG Fiber, JetKVM, Lutron Caseta, Pi 5, Zigbee coordinator, and Minisforum AI X1",
+      "file": "rack_config.json",
+      "app": "rack-configurator",
+      "path": "rack-configurator",
+      "updated": "2026-03-28"
+    }
+  ]
+}
