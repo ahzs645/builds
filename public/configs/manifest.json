@@ -9,6 +9,15 @@
       "app": "rack-configurator",
       "path": "rack-configurator",
       "updated": "2026-03-28"
+    },
+    {
+      "id": "family_tree_arabic",
+      "name": "Ahmad's Family (Arabic)",
+      "description": "Arabic family tree extracted from a MacFamilyTree .mftpkg — 836 persons, 282 families",
+      "file": "family_tree_arabic.json",
+      "app": "familytree",
+      "path": "familytree",
+      "updated": "2026-04-20"
     }
   ]
 }
