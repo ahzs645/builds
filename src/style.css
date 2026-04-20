@@ -1,6 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
+:root,
+:root[data-theme='dark'] {
   --bg: #0a0a0f;
   --surface: #13131a;
   --surface-hover: #1a1a24;
@@ -10,6 +11,22 @@
   --text-muted: #8888a0;
   --accent: #6366f1;
   --accent-hover: #818cf8;
+  --on-accent: #ffffff;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --surface-hover: #f2f2f7;
+  --border: #e2e2ec;
+  --border-hover: #c5c5d4;
+  --text: #1a1a24;
+  --text-muted: #6d6d85;
+  --accent: #5458e8;
+  --accent-hover: #4346c9;
+  --on-accent: #ffffff;
+  color-scheme: light;
 }
 
 body {
@@ -28,6 +45,39 @@ body {
 
 header {
   margin-bottom: 3rem;
+}
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
 }
 
 header h1 {
@@ -86,7 +136,7 @@ header p {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   background: var(--accent);
-  color: white;
+  color: var(--on-accent);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
 }
@@ -136,7 +186,7 @@ header p {
 .btn-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: white;
+  color: var(--on-accent);
 }
 
 .btn-primary:hover {
